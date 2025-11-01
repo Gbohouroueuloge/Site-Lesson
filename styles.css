@@ -20,6 +20,13 @@ header {
     z-index: 99;
 }
 
+.logo-princ {
+    width: 16vw !important;
+    aspect-ratio: 5/1 !important; 
+    padding: O !important; 
+    margin: 0 !important;
+}
+
 .btn-hov {
     background: var(--second-background-color);
     font-weight: bold;
@@ -239,6 +246,11 @@ footer {
 
 @media screen and (max-width: 1210px) {
     body {font-size: 1.4rem;}
+
+    .logo-princ {
+        width: 24vw !important;
+        aspect-ratio: 5/3 !important;
+    }
 
     #offcanvasForm, #offcanvasInscrire, #offcanvasConnecte {
         width: 90% !important;
