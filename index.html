@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson</title>
     <link rel="stylesheet" href="Fichiers-Externe/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="Fichiers-Externe/bootstrap.bundle.min.js"></script>
 
 </head>
 <body class="m-0 p-0 border-0">
+
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-lg " id="navbar-example2">
             <div class="container-fluid">
                 <a href="index.html" class="title-princ navbar-brand fs-4 fw-bold">Lesson<span class="point-title-princ">.</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Navigation">
@@ -21,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav ms-auto gap-2 gap-lg-4 mb-2 mb-lg-0 fw-semibold">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link active" aria-current="page">Maison</a>
+                            <a href="#home" class="nav-link" aria-current="page">Maison</a>
                         </li>
                         <li class="nav-item">
                             <a href="#cours" class="nav-link">Cours</a>
@@ -33,7 +35,7 @@
                             <a href="#blog" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="btn-inscrire btn btn-dark rounded-pill px-5 m-auto d-block">S'inscrire</button>
+                            <button type="button" class="btn-inscrire btn btn-dark rounded-pill px-5 m-auto d-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasInscrire" aria-controls="offcanvasInscrire">S'inscrire</button>
                         </li>
                     </ul>
                 </div>
@@ -41,31 +43,153 @@
         </nav>
     </header>
 
-    <main>
+    <main data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
+
+        <!-- Les offcanvas -->
+        <div class="offcanvas offcanvas-end w-50" id="offcanvasInscrire" tabindex="-1" aria-labelledby="offcanvasInscrireLabel">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title fw-bold" id="offcanvasInscrireLabel">Formulaire D'Inscription</h2>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Entrez votre nom" required>
+                        <label for="name" class="fw-bold">Nom</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Entrez votre email" required>
+                        <label for="email" class="fw-bold">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Entrez votre Mots de pass" pattern="[A-Za-z0-9]{6,}" required>
+                        <label for="password" class="fw-bold">Mot De Pass</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Entrez votre Mots de pass" pattern="[A-Za-z0-9]{6,}" required>
+                        <label for="password" class="fw-bold">Confirmer Mot De Pass</label>
+                    </div>
+
+                    <div class="form-check form-switch mb-5">
+                        <label for="notification" class="form-check-label">En cliquant vous accepté notre politique de confidentialité</label>
+                        <input type="checkbox" name="notification" id="notification" class="form-check-input" required>
+                    </div>
+
+                    <button type="submit" class="d-block m-auto btn btn-hov rounded-pill w-50 fw-bold">S'inscrire</button>
+                </form>
+                <p class="mt-4 text-center">Vous avez deja un compte. <a href="#offcanvasConnecte" data-bs-toggle="offcanvas" aria-controls="offcanvasConnecte">Se connecté</a></p>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end w-50" id="offcanvasConnecte" tabindex="-1" aria-labelledby="offcanvasConnecteLabel">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title fw-bold" id="offcanvasConnecteLabel">Formulaire De Connection</h2>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Entrez votre nom" required>
+                        <label for="name" class="fw-bold">Nom</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Entrez votre email" required>
+                        <label for="email" class="fw-bold">Email</label>
+                    </div>
+                    <div class="form-floating mb-5">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Entrez votre Mots de pass" pattern="[A-Za-z0-9]{6,}" required>
+                        <label for="password" class="fw-bold">Mot De Pass</label>
+                    </div>
+
+                    <button type="submit" class="d-block m-auto btn btn-hov rounded-pill w-50 fw-bold">Se Connecter</button>
+                </form>
+                <p class="mt-4 text-center">Vous n'avez pas de compte. <a href="#offcanvasInscrire" data-bs-toggle="offcanvas" aria-controls="offcanvasInscrire">S'Inscrire</a></p>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" id="offcanvasForm" tabindex="-1" aria-labelledby="offcanvasFormLabel">
+            <div class="offcanvas-header">
+                <h2 class="offcanvas-title fw-bold" id="offcanvasFormLabel">Formulaire De Reservation</h2>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form method="post">
+                    <div class="form-floating mb-3">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Entrez votre nom">
+                        <label for="name" class="fw-bold">Nom</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Entrez votre email">
+                        <label for="email" class="fw-bold">Email</label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="date" class="input-group-text fw-bold">Date</label>
+                        <input type="date" name="date" id="date" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="payement" class="form-label fw-bold">Payer par :</label>
+                        <select name="payement" id="payement" class="form-select">
+                            <option value="">Selectionné</option>
+                            <option value="1">PayPal</option>
+                            <option value="2">Carte</option>
+                            <option value="3">Espece</option>
+                            <option value="4">Autres</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check form-switch mb-5">
+                        <label for="notification" class="form-check-label">Vous signalez avant la date decheance</label>
+                        <input type="checkbox" name="notification" id="notification" class="form-check-input">
+                    </div>
+                    <div class="btn-group w-100 gap-4">
+                        <button type="submit" class="btn btn-hov rounded-pill w-25 fw-bold">Reservez</button>
+                        <button type="reset" class="btn btn-danger rounded-pill w-25" data-bs-dismiss="offcanvas">Annuler</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <section id="home" class="w-100">
             <div class="position-relative">
-                <div class="cont-home d-flex justify-content-center">
+                <div class="cont-home w-100 gap-1 d-flex flex-column flex-lg-row  justify-content-around justify-content-xl-center">
                     <div class="container-img-guy">
                         <img src="Img/guy-lesson 1.png" alt="Image d'un etudiant" class="img-guy img-fluid rounded-3">
                     </div>
-                    <div class="contenue-home p-4">
-                        <h2 class="title-home h1 fw-bold">Apprenez sans limites et diffusez vos connaissances.</h2>
+                    <div class="contenue-home p-2 p-xl-4">
+                        <h2 class="title-home text-center text-xl-start h1 fw-bold">Apprenez sans limites et diffusez vos connaissances.</h2>
                         <p class="fs-5 text-opacity-25">Développez de nouvelles compétences pour avoir le sentiment que « cette année est la mienne » grâce à des cours, des certificats et des diplômes d'universités et d'entreprises de renommée mondiale.</p>
-                        <div class="btn-group gap-2 gap-lg-5">
-                            <button type="button" class="btn-voir-cours btn btn-lg rounded-pill w-50">Voir les cours</button>
-                            <button type="button" class="btn btn-outline-dark btn-lg rounded-pill d-flex align-content-center justify-content-center">
-                                <img src="Img/Polygon 2.png " alt="Une icone triangle" class="img-thumbnail h-75 align-self-center rounded-circle p-2">
+                        <div class="group-butt btn-group gap-2 gap-lg-5 align-items-center">
+                            <a type="button" href="#cours" class="btn-voir-cours btn rounded-pill w-50">Voir les cours</a>
+                            <button type="button" class="btt-video btn btn-outline-dark rounded-pill d-flex align-content-center justify-content-center" data-bs-toggle="modal" data-bs-target="#modalVideo">
+                                <img src="Img/Polygon 2.png " alt="Une icone triangle" class="img-thumbnail img-fluid h-75 align-self-center rounded-circle p-xl-2">
                                 <span>Regarder la vidéo</span>
                             </button>
                         </div>
+                        <div class="modal fade" id="modalVideo" tabindex="-1" aria-labelledby="ModalVideoLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title" id="ModalVideoLabel">Nos Videos</h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-danger fs-3 fw-bold text-center">Videos non disponible pour le moment</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-hov" data-bs-dismiss="modal">Fermer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <h3 class="fs-4 mt-4">Engagement récent</h3>
-                        <div class="row">
+                        <div class="nb-person row">
                             <p class="col"><span class="fs-2 fw-bold">50 000</span> étudiants</p>
-                            <p class="col-8"><span class="fs-2 fw-bold">Plus de 70 000</span> étudiants</p>
+                            <p class="col-7 col-xl-8"><span class="fs-2 fw-bold">Plus de 70 000</span> étudiants</p>
                         </div>
                     </div>
                 </div>
                 <div class="cours container w-25 position-absolute pt-5 rounded-4">
+                    <h2 class="d-xl-none fw-bold text-center">Nos Cours</h2>
                     <div>   
                         <div class="cor row">
                             <img src="Img/list.svg" alt="Une liste" class="col-3 img-thumbnail p-3 h-25 align-self-center">
@@ -98,18 +222,18 @@
         </section>
 
         <section id="cours" class="w-100">
-            <div class="info-cours d-flex justify-content-between">
+            <div class="info-cours d-flex justify-content-between gap-4 gap-xl-0">
                 <div class="cont-cours">
-                    <h2 class="h2 fw-bold">Nos cours populaires</h2>
+                    <h2 class="fw-bold">Nos cours populaires</h2>
                     <p class="fs-5 opacity-75">Développez de nouvelles compétences grâce à des cours tendance et brillez pour votre prochaine carrière.</p>
                 </div>
                 <div class="butt-defilement btn-group gap-4 align-self-center">
-                    <p class="btn btn-lg btn-outline-warning rounded-circle">&lt;</p>
-                    <p class="btn btn-lg btn-outline-warning  rounded-circle">&gt;</p>
+                    <button class="btn btn-lg btn-outline-warning rounded-circle" type="button">&lt;</button>
+                    <button class="btn btn-lg btn-outline-warning  rounded-circle" type="button">&gt;</button>
                 </div>
             </div>
 
-            <div class="card-cours d-flex gap-4 mt-5">
+            <div class="card-cours d-flex flex-column flex-xl-row gap-4 mt-5">
                 <div class="card card-pr rounded-4">
                     <img src="Img/card_1.png" alt="Un Cours" class="img-fluid card-img-top">
                     <div class="card-body">
@@ -123,7 +247,7 @@
                         <p class="opacity-75">Suivez la meilleure formation, acquérez des connaissances et brillez pour votre future carrière.</p>
                         <div class="d-flex align-content-center justify-content-between">
                             <span class="align-self-center fw-bold">120,75 $</span>
-                            <button type="button" class="btn b rounded-pill p-2">Reservez Maintenant</button>
+                            <button type="button" class="btn btn-hov  rounded-pill p-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasForm" aria-controls="offcanvasForm">Reservez Maintenant</button>
                         </div>
                     </div>
                 </div>
@@ -141,7 +265,7 @@
                         <p class="opacity-75">Suivez la meilleure formation, acquérez des connaissances et brillez pour votre future carrière.</p>
                         <div class="d-flex align-content-center justify-content-between">
                             <span class="align-self-center fw-bold">120,75 $</span>
-                            <button type="button" class="btn b rounded-pill p-2">Reservez Maintenant</button>
+                            <button type="button" class="btn btn-hov  rounded-pill p-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasForm" aria-controls="offcanvasForm">Reservez Maintenant</button>
                         </div>
                     </div>
                 </div>
@@ -150,8 +274,7 @@
                     <img src="Img/card_3.png" alt="Un Cours" class="img-fluid card-img-top">
                     <div class="card-body">
                         <div class="hstack gap-3">
-                            <h3 class="card-title fs-5 text-center fw-semibold"><a href="#" class="text-decoration-none text-black">Conception d'applications Web
-</a></h3>
+                            <h3 class="card-title fs-5 text-center fw-semibold"><a href="#" class="text-decoration-none text-black">Conception d'applications Web</a></h3>
                             <p class="">
                                 <img src="Img/star.svg" alt="Une etoille" class="img-fluid">
                                 4.5
@@ -160,7 +283,7 @@
                         <p class="opacity-75">Suivez la meilleure formation, acquérez des connaissances et brillez pour votre future carrière.</p>
                         <div class="d-flex align-content-center justify-content-between">
                             <span class="align-self-center fw-bold">120,75 $</span>
-                            <button type="button" class="btn b rounded-pill p-2">Reservez Maintenant</button>
+                            <button type="button" class="btn btn-hov  rounded-pill p-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasForm" aria-controls="offcanvasForm">Reservez Maintenant</button>
                         </div>
                     </div>
                 </div>
@@ -185,23 +308,23 @@
         </section>
 
         <section id="service" class="w-100">
-            <div class="service1 d-flex justify-content-between gap-3">
+            <div class="service1 d-flex flex-column flex-xl-row justify-content-between gap-3">
                 <img src="Img/feature-1.jpg" alt="photo personne" class="img-fluid w-25 h-75 rounded-4 align-self-end">
                 <img src="Img/feature-2.jpg" alt="photo personne" class=" img-fluid w-25 h-75 me-4 rounded-4 align-self-start">
                 <div class="service1-content">
                     <h2 class="fw-bold fs-1">Résultats d'apprentissage grâce à notre plateforme exceptionnelle</h2>
                     <p class="opacity-75">87 % des personnes suivant une formation professionnelle font état de retombées positives sur leur carrière, comme une promotion, une augmentation de salaire ou le début d'une nouvelle carrière.</p>
-                    <p class="opacity-75">Rapport d'impact des leçons (2022)</p>
-                    <button type="button" class="btn btn-warning text-light rounded-pill w-50">S'inscrire</button>
+                    <p class="opacity-75">Rapport d'impact des leçons (2025)</p>
+                    <button type="button" class="d-block btn btn-warning text-light rounded-pill w-50 m-auto m-xl-0"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasInscrire" aria-controls="offcanvasInscrire">S'inscrire</button>
                 </div>
             </div>
 
-            <div class="service2 d-flex justify-content-between gap-5">
+            <div class="service2 d-flex flex-column flex-xl-row justify-content-between gap-3 gap-xl-5">
                 <div class="service2-content w-50">
                     <h2 class="fw-bold fs-1">Passez à l'étape suivante vers vos objectifs personnels et professionnels avec Lesson.</h2>
                     <p class="opacity-75">87 % des personnes suivant une formation professionnelle font état de retombées positives sur leur carrière, comme une promotion, une augmentation de salaire ou le début d'une nouvelle carrière.</p>
-                    <p class="opacity-75">Rapport d'impact des leçons (2022)</p>
-                    <button type="button" class="btn btn-warning text-light rounded-pill w-75">Inscrivez-vous maintenant</button>
+                    <p class="opacity-75">Rapport d'impact des leçons (2025)</p>
+                    <button type="button" class="d-block btn btn-warning text-light rounded-pill w-75 m-auto m-xl-0"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasInscrire" aria-controls="offcanvasInscrire">Inscrivez-vous maintenant</button>
                 </div>
                 <img src="Img/feature-3.jpg" alt="photo personne" class="img-fluid w-50 h-75 rounded-4 align-self-center">
             </div>
@@ -209,40 +332,83 @@
 
         <section id="blog" class="w-100">
             <h2 class="fs-1 fw-bold text-center">Notre blog</h2>
-            <p class="text-center m-auto opacity-75" style="width: 30% !important;">Consultez notre blog de voyage régulier et découvrez les dernières actualités sur les circuits et les voyages.</p>
-            <div class="card-blog d-flex justify-content-center gap-4 mt-5">
+            <p class="text-center m-auto opacity-75">Consultez notre blog de voyage régulier et découvrez les dernières actualités sur les circuits et les voyages.</p>
+            <div class="card-blog d-flex flex-column flex-xl-row justify-content-center gap-4 mt-5">
                 <div class="card w-25 rounded-4">
-                    <img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid" style="height: 60vh;">
-                    <div class="card-header">
-                        <p class="opacity-75 card-title">21 novembre 2021</p>
+                    <a href="#" class="text-decoration-none text-black fw-semibold"><img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid object-fit-cover"></a>
+                    <div class="card-header d-flex justify-content-start align-items-center gap-1">
+                        <div class="fal2 align-self-center"></div>
+                        <p class="opacity-75 card-title pt-2">21 novembre 2021</p>
                     </div>
                     <div class="card-body">
-                        <p class="">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</p>
-                        <a href="#" class="btn btn-primary card-link" type="button">En savoir plus</a>
+                        <p><a href="#" class="text-decoration-none text-black fw-semibold">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</a></p>
+                        <button class="btn-hov btn rounded-pill" type="button">En savoir plus</a>
                     </div>
                 </div>
                 <div class="card w-25 rounded-4">
-                    <img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid" style="height: 60vh;">
-                    <div class="card-header">
-                        <p class="opacity-75 card-title">21 novembre 2021</p>
+                    <a href="#" class="text-decoration-none text-black fw-semibold"><img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid object-fit-cover"></a>
+                    <div class="card-header d-flex justify-content-start align-items-center gap-1">
+                        <div class="fal2 align-self-center"></div>
+                        <p class="opacity-75 card-title pt-2">21 novembre 2021</p>
                     </div>
                     <div class="card-body">
-                        <p class="">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</p>
-                        <a href="#" class="btn btn-primary card-link" type="button">En savoir plus</a>
+                        <p><a href="#" class="text-decoration-none text-black fw-semibold">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</a></p>
+                        <button class="btn-hov btn rounded-pill" type="button">En savoir plus</a>
                     </div>
                 </div>
                 <div class="card w-25 rounded-4">
-                    <img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid" style="height: 60vh;">
-                    <div class="card-header">
-                        <p class="opacity-75 card-title">21 novembre 2021</p>
+                    <a href="#" class="text-decoration-none text-black fw-semibold"><img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid object-fit-cover"></a>
+                    <div class="card-header d-flex justify-content-start align-items-center gap-1">
+                        <div class="fal2 align-self-center"></div>
+                        <p class="opacity-75 card-title pt-2">21 novembre 2021</p>
                     </div>
                     <div class="card-body">
-                        <p class="">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</p>
-                        <a href="#" class="btn btn-primary card-link" type="button">En savoir plus</a>
+                        <p><a href="#" class="text-decoration-none text-black fw-semibold">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</a></p>
+                        <button class="btn-hov btn rounded-pill" type="button">En savoir plus</a>
                     </div>
                 </div>
             </div>
+            <div class="fal d-none d-xl-flex gap-2 justify-content-center mt-4">
+                <div class="fal-div1"></div>
+                <div class="fal-div2"></div>
+                <div></div>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-contenue d-flex flex-column flex-xl-row justify-content-center align-items-start gap-4 gap-xl-5 text-light">
+            <div class="w-25">
+                <a href="index.html" class="fs-4 text-light text-decoration-none fw-bold">Lesson<span class="point-title-princ">.</span></a>
+                <p class="aide">Besoin d'aide pour réaliser votre rêve professionnel ? Faites-nous confiance. Avec Lesson, étudier devient beaucoup plus facile.</p>
+                <div class="links-resaux d-flex justify-content-center gap-4">
+                    <a href="" class=""><img src="Img/facebook.svg" alt="Icone facebook" class=""></a>
+                    <a href="" class=""><img src="Img/Linkedin.svg" alt="icone Linkedin" class=""></a>
+                    <a href="" class=""><img src="Img/Instagram.svg" alt="icone Instagram" class=""></a>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-0">
+                <h2 class="fs-6 fw-bold border-bottom pb-3">Entreprise</h2>
+                <p class="mb-2">À propos de nous</p>
+                <p class="mb-2">Caractéristiques</p> 
+                <p class="mb-2">Nos tarifs</p>
+                <p class="mb-2">Dernières nouvelles</p>
+            </div>
+            <div class="d-flex flex-column gap-0">
+                <h2 class="fs-6 fw-bold border-bottom border-opacity-25 pb-3">Soutien</h2>
+                <p class="mb-2">FAQ</p>
+                <p class="mb-2">Conditions générales</p>
+                <p class="mb-2">politique de confidentialité</p>
+                <p class="mb-2">Contactez-nous</p>
+            </div>
+            <div class="d-flex flex-column gap-0">
+                <h2 class="fs-6 fw-bold border-bottom border-1 pb-3">Adresse</h2>
+                <p class="mb-2">Lieu : Abidjan 02 Yopougon </p>
+                <p class="mb-2">Courriel : <a href="mailto:email@gmail.com" class="text-decoration-none text-light">email@gmail.com</a></p>
+                <p class="mb-2">Téléphone : <a href="tel:+225 0102030405" class="text-decoration-none text-light">+225 0102030405</a></p>
+            </div>
+        </div>
+        <p class="text-light opacity-75 border-top mt-5 pt-3 text-center">&copy;Copyright 2025 Lesson. Tous droits réservés</p>
+    </footer>
 </body>
 </html>

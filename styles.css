@@ -5,20 +5,30 @@
     --text-color: #171100;
     --second-text-color: #5f5b53;
     --white-color: #ffffff;
-    --font-heading: Sen, sans-serif;
 }
+
+/* * {border: 1px solid;} */
 
 body {
     font-size: 1rem !important;
     font-family: "Poppins", sans-serif;
     color: var(--text-color);
-    /* background: var(--first-background-color) !important; */
 }
 
-.card-cours .b {
-    background: var(--second-background-color) !important;
-    color: var(--white-color);
+header {
+    background: var(--first-background-color);
+    z-index: 99;
+}
+
+.btn-hov {
+    background: var(--second-background-color);
     font-weight: bold;
+    color: var(--white-color);
+}
+.btn-hov:hover {
+    background: var(--primary-color);
+    font-weight: bold;
+    color: var(--white-color);
 }
 
 .point-title-princ {
@@ -29,20 +39,19 @@ body {
     background: var(--first-background-color);
     padding-top: 5rem;
     padding-bottom: 14rem;
-
 }
 
-.cont-home {
-    gap: 8rem !important;
+.container-img-guy {
+    width: 37%;
 }
 
 .contenue-home {
-    width: 38% !important;
-    padding-top: 5rem !important;
+    width: 100% !important;
+    padding-top: 2rem !important;
 }
 
 .title-home {
-    font-size: 3.5rem !important;
+    font-size: 1.2rem !important;
 }
 
 .title-home + p {
@@ -58,10 +67,6 @@ body {
     opacity: 0.7 !important;
 }
 
-.container-img-guy {
-    width: 37%;
-}
-
 .cours {
     background: var(--white-color);
     bottom: -5% !important;
@@ -74,17 +79,8 @@ body {
     aspect-ratio: 1/1;
 }
 
-
 #cours {
     padding-top: 13rem;
-}
-
-#cours :is(.info-cours, .card-cours) {
-    padding-left: 10%;
-}
-
-.cont-cours {
-    width: 37% !important;
 }
 
 .butt-defilement {
@@ -112,8 +108,8 @@ body {
     left: 10% !important;
 }
 
-.fal > div {
-    width: 0.35rem !important;
+.fal > div, .fal2 {
+    width: 0.45rem !important;
     aspect-ratio: 1/1 !important; 
     background: var(--second-text-color);
     border-radius: 50%;
@@ -123,22 +119,29 @@ body {
     background: var(--primary-color);
 }
 
-#service {
-    padding-top: 13rem;
+.fal-div1 {
+    background: var(--second-text-color) !important;
 }
 
-.service1, .service2 {
-    margin-left: 10% !important;
-    margin-right: 10% !important;
+.fal-div2 {
+    background: var(--primary-color) !important;
+}
+
+.fal2 {
+    width: 0.5rem !important;
+    background: var(--primary-color);
+}
+
+#service {
+    padding-top: 13rem;
 }
 
 .service2 {
     margin-top: 10rem !important;
 }
 
-.service1-content {
-    width: 65% !important;
-    padding: 2rem;
+.card-blog img {
+    height: 30vh !important;
 }
 
 #blog {
@@ -146,9 +149,37 @@ body {
     padding-top: 9rem !important;
 }
 
-@media screen and (min-width: 1020px) {
+footer {
+    margin-top: 10rem !important;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    background: var(--second-background-color);
+}
+
+.links-resaux a:hover {
+    transform: scale(1.2);
+}
+
+.footer-contenue p:not(.aide):hover {
+    transform: scale(1.2);
+}
+
+.footer-contenue p {
+    font-size: 0.85rem !important;
+    opacity: 0.7;
+}
+
+.footer-contenue .aide {
+    word-spacing: 5px;
+}
+
+.footer-contenue h2 {
+    border-width: 0.01rem !important;
+    border-bottom-style: outset !important;
+}
+
+@media screen and (min-width: 1220px) {
     nav {
-        background: var(--first-background-color);
         padding-right: 10.5rem !important;
         padding-left: 7rem !important; 
         padding-top: 2.5rem !important;
@@ -159,5 +190,176 @@ body {
         width: 30% !important;;
     }
 
-    
+    .cont-home {
+        gap: 8rem !important;
+    }
+
+    .contenue-home {
+        width: 38% !important;
+        padding-top: 5rem !important;
+    }
+
+    .title-home {
+        font-size: 3.5rem !important;
+    }
+
+    .title-home + p {
+        opacity: 0.7 !important;
+    }
+
+    #cours :is(.info-cours, .card-cours) {
+        padding-left: 10% !important;
+    }
+
+    .cont-cours {
+        width: 37% !important;
+    }
+
+    .service1, .service2 {
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+
+    .service1-content {
+        width: 65% !important;
+        padding: 2rem;
+    }
+
+    #blog > p {
+        width: 30% !important;
+    }
+
+    footer {
+        margin-top: 10rem !important;
+        padding: 5rem 4rem;
+        padding-bottom: 1rem;
+        background: var(--second-background-color);
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    body {font-size: 1.4rem;}
+
+    #offcanvasForm, #offcanvasInscrire, #offcanvasConnecte {
+        width: 90% !important;
+    }
+
+    .container-img-guy {
+        width: 80% !important;
+        margin: auto;
+    }
+
+    .title-home + p {
+        font-size: 0.8rem !important;
+    }
+
+    .group-butt {
+        width: 100% !important;
+    }
+
+    .btn-voir-cours, .btt-video {
+        font-size: 0.8rem !important;
+        width: 50% !important;
+        padding: 0.2rem !important;
+        height: max-content !important;
+    }
+
+    .btt-video img{
+        width: 12% !important;
+        aspect-ratio: 1/1 !important;
+    }
+
+    .cont-home h3 {
+        font-size: 1rem !important;
+    }
+
+    .nb-person span {
+        font-size: 1.1rem !important;
+    }
+
+    .cours {
+        position: static !important;
+        width: 100% !important;
+        background: var(--first-background-color);
+    }
+    .cours p {
+        font-size: 1rem !important;
+    }
+
+    .info-cours {
+        width: 100% !important;
+        justify-content: space-around !important;
+    }
+
+    .cont-cours * {
+        width: 60vw !important;
+        font-size: 0.8rem !important;
+    }
+
+    .cont-cours h2 {
+        margin-left: auto;
+        font-size: 1.1rem !important;
+    }
+
+    .card-pr {
+        width: 70% !important;
+        margin: auto;
+    }
+
+    .card-pr h3 {
+        font-size: 1rem !important;
+    }
+
+    .card-pr p, .card-pr span {
+        font-size: 0.8rem !important;
+    }
+
+    .card-pr button {
+        font-size: 0.8rem !important;
+    }
+
+    .avis {
+        display: none !important;
+    }
+
+    .service1-content, .service2-content {
+        width: 90% !important;
+        margin: auto;
+        border-radius: 5%;
+    }
+
+    .service1 img, .service2 img{
+        width: 75% !important;
+        margin: auto 0.4rem !important;
+    }
+
+    .service2 img {
+        width: 90% !important;
+    }
+
+    .service1-content h2, .service2-content h2 {
+        font-size: 1.1rem !important;
+        text-align: center;
+    }
+
+    .service1-content p, .service2-content p {
+        font-size: 0.8rem !important;
+    }
+
+    #blog > p {
+        width: 100% !important;
+    }
+
+    .card-blog > div {
+        width: 90% !important;
+        margin: auto;
+    }
+
+    .card-blog p {
+        font-size: 1rem !important;
+    }
+
+    .footer-contenue > div {
+        width: 100% !important;
+    }
 }
