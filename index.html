@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson</title>
+    <link rel="stylesheet" href="Fichiers-Externe/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="Fichiers-Externe/bootstrap.bundle.min.js"></script>
+
+</head>
+<body class="m-0 p-0 border-0">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a href="index.html" class="title-princ navbar-brand fs-4 fw-bold">Lesson<span class="point-title-princ">.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto gap-2 gap-lg-4 mb-2 mb-lg-0 fw-semibold">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active" aria-current="page">Maison</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#cours" class="nav-link">Cours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#service" class="nav-link">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#blog" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn-inscrire btn btn-dark rounded-pill px-5 m-auto d-block">S'inscrire</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="w-100">
+            <div class="position-relative">
+                <div class="cont-home d-flex justify-content-center">
+                    <div class="container-img-guy">
+                        <img src="Img/guy-lesson 1.png" alt="Image d'un etudiant" class="img-guy img-fluid rounded-3">
+                    </div>
+                    <div class="contenue-home p-4">
+                        <h2 class="title-home h1 fw-bold">Apprenez sans limites et diffusez vos connaissances.</h2>
+                        <p class="fs-5 text-opacity-25">Développez de nouvelles compétences pour avoir le sentiment que « cette année est la mienne » grâce à des cours, des certificats et des diplômes d'universités et d'entreprises de renommée mondiale.</p>
+                        <div class="btn-group gap-2 gap-lg-5">
+                            <button type="button" class="btn-voir-cours btn btn-lg rounded-pill w-50">Voir les cours</button>
+                            <button type="button" class="btn btn-outline-dark btn-lg rounded-pill d-flex align-content-center justify-content-center">
+                                <img src="Img/Polygon 2.png " alt="Une icone triangle" class="img-thumbnail h-75 align-self-center rounded-circle p-2">
+                                <span>Regarder la vidéo</span>
+                            </button>
+                        </div>
+                        <h3 class="fs-4 mt-4">Engagement récent</h3>
+                        <div class="row">
+                            <p class="col"><span class="fs-2 fw-bold">50 000</span> étudiants</p>
+                            <p class="col-8"><span class="fs-2 fw-bold">Plus de 70 000</span> étudiants</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cours container w-25 position-absolute pt-5 rounded-4">
+                    <div>   
+                        <div class="cor row">
+                            <img src="Img/list.svg" alt="Une liste" class="col-3 img-thumbnail p-3 h-25 align-self-center">
+                            <div class="col-9">
+                                <span>20 cours</span>
+                                <p class="fs-5 fw-semibold">Conception d'interface utilisateur/d'expérience utilisateur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cor row">
+                            <img src="Img/dev-icon.png" alt="Une balise" class="col-3 img-thumbnail p-3 h-25 align-self-center">
+                            <div class="col-9">
+                                <span>20 cours</span>
+                                <p class="fs-5 fw-semibold">Développement</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cor row">
+                            <img src="Img/notify-icon.png" alt="Une liste" class="col-3 img-thumbnail p-3 h-25 align-self-center">
+                            <div class="col-9">
+                                <span>30 cours</span>
+                                <p class="fs-5 fw-semibold">Commercialisation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cours" class="w-100">
+            <div class="info-cours d-flex justify-content-between">
+                <div class="cont-cours">
+                    <h2 class="h2 fw-bold">Nos cours populaires</h2>
+                    <p class="fs-5 opacity-75">Développez de nouvelles compétences grâce à des cours tendance et brillez pour votre prochaine carrière.</p>
+                </div>
+                <div class="butt-defilement btn-group gap-4 align-self-center">
+                    <p class="btn btn-lg btn-outline-warning rounded-circle">&lt;</p>
+                    <p class="btn btn-lg btn-outline-warning  rounded-circle">&gt;</p>
+                </div>
+            </div>
+
+            <div class="card-cours d-flex gap-4 mt-5">
+                <div class="card card-pr rounded-4">
+                    <img src="Img/card_1.png" alt="Un Cours" class="img-fluid card-img-top">
+                    <div class="card-body">
+                        <div class="hstack gap-3">
+                            <h3 class="card-title fs-5 text-center fw-semibold"><a href="#" class="text-decoration-none text-black">Conception web de base</a></h3>
+                            <p class="">
+                                <img src="Img/star.svg" alt="Une etoille" class="img-fluid">
+                                4.5
+                            </p>
+                        </div>
+                        <p class="opacity-75">Suivez la meilleure formation, acquérez des connaissances et brillez pour votre future carrière.</p>
+                        <div class="d-flex align-content-center justify-content-between">
+                            <span class="align-self-center fw-bold">120,75 $</span>
+                            <button type="button" class="btn b rounded-pill p-2">Reservez Maintenant</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-pr rounded-4">
+                    <img src="Img/card_2.png" alt="Un Cours" class="img-fluid card-img-top">
+                    <div class="card-body">
+                        <div class="hstack gap-3">
+                            <h3 class="card-title fs-5 text-center fw-semibold"><a href="#" class="text-decoration-none text-black">Conception d'interface utilisateur/d'expérience utilisateur</a></h3>
+                            <p class="">
+                                <img src="Img/star.svg" alt="Une etoille" class="img-fluid">
+                                4.5
+                            </p>
+                        </div>
+                        <p class="opacity-75">Suivez la meilleure formation, acquérez des connaissances et brillez pour votre future carrière.</p>
+                        <div class="d-flex align-content-center justify-content-between">
+                            <span class="align-self-center fw-bold">120,75 $</span>
+                            <button type="button" class="btn b rounded-pill p-2">Reservez Maintenant</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-pr rounded-4">
+                    <img src="Img/card_3.png" alt="Un Cours" class="img-fluid card-img-top">
+                    <div class="card-body">
+                        <div class="hstack gap-3">
+                            <h3 class="card-title fs-5 text-center fw-semibold"><a href="#" class="text-decoration-none text-black">Conception d'applications Web
+</a></h3>
+                            <p class="">
+                                <img src="Img/star.svg" alt="Une etoille" class="img-fluid">
+                                4.5
+                            </p>
+                        </div>
+                        <p class="opacity-75">Suivez la meilleure formation, acquérez des connaissances et brillez pour votre future carrière.</p>
+                        <div class="d-flex align-content-center justify-content-between">
+                            <span class="align-self-center fw-bold">120,75 $</span>
+                            <button type="button" class="btn b rounded-pill p-2">Reservez Maintenant</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="avis text-light d-flex justify-content-center gap-0">
+                <div class="information-perso vstack gap-3 w-25">
+                    <img src="Img/avatar.png" alt="Une personne" class="">
+                    <h4 class="fw-bold">Pierre Moor</h4>
+                    <p class="opacity-75">Étudiant en conception web</p>
+                    <div class="fal hstack gap-1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="text-avis w-75 position-relative">
+                    <p class="fs-4 pt-4">Non seulement mon CV est impressionnant — rempli de noms et de logos d'institutions de renommée mondiale —, mais ces certificats me rapprochent également de mes objectifs de carrière en validant les compétences que j'ai acquises.</p>
+                    <img src="Img/open_quotes.svg" alt="..." class="position-absolute">
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="w-100">
+            <div class="service1 d-flex justify-content-between gap-3">
+                <img src="Img/feature-1.jpg" alt="photo personne" class="img-fluid w-25 h-75 rounded-4 align-self-end">
+                <img src="Img/feature-2.jpg" alt="photo personne" class=" img-fluid w-25 h-75 me-4 rounded-4 align-self-start">
+                <div class="service1-content">
+                    <h2 class="fw-bold fs-1">Résultats d'apprentissage grâce à notre plateforme exceptionnelle</h2>
+                    <p class="opacity-75">87 % des personnes suivant une formation professionnelle font état de retombées positives sur leur carrière, comme une promotion, une augmentation de salaire ou le début d'une nouvelle carrière.</p>
+                    <p class="opacity-75">Rapport d'impact des leçons (2022)</p>
+                    <button type="button" class="btn btn-warning text-light rounded-pill w-50">S'inscrire</button>
+                </div>
+            </div>
+
+            <div class="service2 d-flex justify-content-between gap-5">
+                <div class="service2-content w-50">
+                    <h2 class="fw-bold fs-1">Passez à l'étape suivante vers vos objectifs personnels et professionnels avec Lesson.</h2>
+                    <p class="opacity-75">87 % des personnes suivant une formation professionnelle font état de retombées positives sur leur carrière, comme une promotion, une augmentation de salaire ou le début d'une nouvelle carrière.</p>
+                    <p class="opacity-75">Rapport d'impact des leçons (2022)</p>
+                    <button type="button" class="btn btn-warning text-light rounded-pill w-75">Inscrivez-vous maintenant</button>
+                </div>
+                <img src="Img/feature-3.jpg" alt="photo personne" class="img-fluid w-50 h-75 rounded-4 align-self-center">
+            </div>
+        </section>
+
+        <section id="blog" class="w-100">
+            <h2 class="fs-1 fw-bold text-center">Notre blog</h2>
+            <p class="text-center m-auto opacity-75" style="width: 30% !important;">Consultez notre blog de voyage régulier et découvrez les dernières actualités sur les circuits et les voyages.</p>
+            <div class="card-blog d-flex justify-content-center gap-4 mt-5">
+                <div class="card w-25 rounded-4">
+                    <img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid" style="height: 60vh;">
+                    <div class="card-header">
+                        <p class="opacity-75 card-title">21 novembre 2021</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</p>
+                        <a href="#" class="btn btn-primary card-link" type="button">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="card w-25 rounded-4">
+                    <img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid" style="height: 60vh;">
+                    <div class="card-header">
+                        <p class="opacity-75 card-title">21 novembre 2021</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</p>
+                        <a href="#" class="btn btn-primary card-link" type="button">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="card w-25 rounded-4">
+                    <img src="Img/photo-1743736750720-5d927199fc15.jpg" alt="blog" class="card-img-top img-fluid" style="height: 60vh;">
+                    <div class="card-header">
+                        <p class="opacity-75 card-title">21 novembre 2021</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="">Comment devenir un concepteur web professionnel en 2022 et trouver un emploi à distance ?</p>
+                        <a href="#" class="btn btn-primary card-link" type="button">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

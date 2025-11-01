@@ -1,0 +1,163 @@
+:root {
+    --primary-color: #ffb900;
+    --first-background-color: #fffcf4;
+    --second-background-color: #2e2100;
+    --text-color: #171100;
+    --second-text-color: #5f5b53;
+    --white-color: #ffffff;
+    --font-heading: Sen, sans-serif;
+}
+
+body {
+    font-size: 1rem !important;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+    /* background: var(--first-background-color) !important; */
+}
+
+.card-cours .b {
+    background: var(--second-background-color) !important;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.point-title-princ {
+    color: var(--primary-color);
+}
+
+#home {
+    background: var(--first-background-color);
+    padding-top: 5rem;
+    padding-bottom: 14rem;
+
+}
+
+.cont-home {
+    gap: 8rem !important;
+}
+
+.contenue-home {
+    width: 38% !important;
+    padding-top: 5rem !important;
+}
+
+.title-home {
+    font-size: 3.5rem !important;
+}
+
+.title-home + p {
+    opacity: 0.7 !important;
+}
+
+.btn-voir-cours {
+    background: var(--primary-color);
+}
+
+.btn-voir-cours:hover {
+    background: var(--primary-color);
+    opacity: 0.7 !important;
+}
+
+.container-img-guy {
+    width: 37%;
+}
+
+.cours {
+    background: var(--white-color);
+    bottom: -5% !important;
+    left: 30% !important;
+    z-index: 2;
+}
+
+.cor img {
+    width: 18%;
+    aspect-ratio: 1/1;
+}
+
+
+#cours {
+    padding-top: 13rem;
+}
+
+#cours :is(.info-cours, .card-cours) {
+    padding-left: 10%;
+}
+
+.cont-cours {
+    width: 37% !important;
+}
+
+.butt-defilement {
+    margin-right: 10rem;
+}
+
+.avis {
+    background: var(--second-background-color);
+    margin-top: 10rem !important;
+    padding: 7rem;
+}
+
+.information-perso > img {
+    width: 25%;
+    aspect-ratio: 1/1;
+}
+
+.text-avis {
+    padding-left: 8rem !important;
+    padding-right: 10rem !important;
+}
+
+.text-avis img {
+    top: -10% !important;
+    left: 10% !important;
+}
+
+.fal > div {
+    width: 0.35rem !important;
+    aspect-ratio: 1/1 !important; 
+    background: var(--second-text-color);
+    border-radius: 50%;
+}
+
+.fal > div:first-of-type {
+    background: var(--primary-color);
+}
+
+#service {
+    padding-top: 13rem;
+}
+
+.service1, .service2 {
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+}
+
+.service2 {
+    margin-top: 10rem !important;
+}
+
+.service1-content {
+    width: 65% !important;
+    padding: 2rem;
+}
+
+#blog {
+    margin-top: 7rem !important;
+    padding-top: 9rem !important;
+}
+
+@media screen and (min-width: 1020px) {
+    nav {
+        background: var(--first-background-color);
+        padding-right: 10.5rem !important;
+        padding-left: 7rem !important; 
+        padding-top: 2.5rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .card-cours > div {
+        width: 30% !important;;
+    }
+
+    
+}
